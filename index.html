@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Chanikya Konda — Oracle Integration Architect (OIC Gen2/Gen3), EBS, HCM, Salesforce integrations."
+    />
+    <title>Chanikya Konda | Oracle Integration Architect</title>
+
+    <style>
+      :root {
+        --bg: #0b1020;
+        --card: #111831;
+        --text: #e7ecff;
+        --muted: #b7c1ff;
+        --line: rgba(255, 255, 255, 0.1);
+        --accent: #8b5cf6;
+        --accent2: #22c55e;
+        --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        --radius: 18px;
+      }
+      [data-theme="light"] {
+        --bg: #f7f8ff;
+        --card: #ffffff;
+        --text: #0d1430;
+        --muted: #3b4a8a;
+        --line: rgba(10, 20, 60, 0.12);
+        --accent: #7c3aed;
+        --accent2: #16a34a;
+        --shadow: 0 20px 60px rgba(30, 40, 90, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: radial-gradient(
+            1200px 600px at 20% -10%,
+            rgba(139, 92, 246, 0.35),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 500px at 95% 0%,
+            rgba(34, 197, 94, 0.22),
+            transparent 55%
+          ),
+          radial-gradient(
+            900px 700px at 70% 120%,
+            rgba(139, 92, 246, 0.18),
+            transparent 55%
+          ),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.55;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      a:hover {
+        opacity: 0.92;
+      }
+      .wrap {
+        max-width: 1060px;
+        margin: 0 auto;
+        padding: 28px 18px 50px;
+      }
+
+      /* Top bar */
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 10px 12px;
+        background: color-mix(in oklab, var(--card) 80%, transparent);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-left: 6px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+      }
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        box-shadow: 0 0 0 4px
+          color-mix(in oklab, var(--accent) 30%, transparent);
+      }
+      nav {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 14px;
+      }
+      nav a {
+        color: var(--muted);
+      }
+      nav a:hover {
+        color: var(--text);
+      }
+      .btn {
+        border: 1px solid var(--line);
+        background: color-mix(in oklab, var(--card) 88%, transparent);
+        color: var(--text);
+        border-radius: 999px;
+        padding: 10px 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.08s ease, opacity 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        user-select: none;
+      }
+      .btn:active {
+        transform: translateY(1px);
+      }
+      .btn.primary {
+        border-color: color-mix(in oklab, var(--accent) 55%, var(--line));
+        background: linear-gradient(
+          135deg,
+          color-mix(in oklab, var(--accent) 55%, transparent),
+          color-mix(in oklab, var(--accent2) 40%, transparent)
+        );
+      }
+      .btn.small {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        background: color-mix(in oklab, var(--card) 85%, transparent);
+      }
+
+      /* Hero */
+      .hero {
+        margin-top: 18px;
+        padding: 28px 22px;
+        border-radius: var(--radius);
+        background: linear-gradient(
+          180deg,
+          color-mix(in oklab, var(--card) 92%, transparent),
+          color-mix(in oklab, var(--card) 82%, transparent)
+        );
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero:before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        background: radial-gradient(
+            700px 260px at 0% 0%,
+            rgba(139, 92, 246, 0.22),
+            transparent 60%
+          ),
+          radial-gradient(
+            600px 220px at 100% 0%,
+            rgba(34, 197, 94, 0.18),
+            transparent 55%
+          );
+        pointer-events: none;
+      }
+      .hero-inner {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 18px;
+        align-items: start;
+      }
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(30px, 4.2vw, 46px);
+        line-height: 1.15;
+        letter-spacing: -0.6px;
+      }
+      .sub {
+        color: var(--muted);
+        font-size: 16px;
+        margin: 0 0 18px;
+        max-width: 68ch;
+      }
+      .cta {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .hero-card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 16px 16px 14px;
+        background: color-mix(in oklab, var(--card) 90%, transparent);
+      }
+      .hero-card h3 {
+        margin: 0 0 10px;
+        font-size: 14px;
+        color: var(--muted);
+        font-weight: 700;
+        letter-spacing: 0.2px;
+      }
+      .list {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--text);
+      }
+      .list li {
+        margin: 8px 0;
+        color: var(--muted);
+      }
+      .list b {
+        color: var(--text);
+      }
+      .chips {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .chip {
+        border: 1px solid var(--line);
+        padding: 7px 10px;
+        border-radius: 999px;
+        font-size: 13px;
+        color: var(--muted);
+        background: color-mix(in oklab, var(--card) 86%, transparent);
+        white-space: nowrap;
+      }
+
+      /* Sections */
+      .grid {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 18px 18px 16px;
+        background: color-mix(in oklab, var(--card) 92%, transparent);
+        box-shadow: var(--shadow);
+      }
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        letter-spacing: -0.2px;
+      }
+      .card p {
+        margin: 0 0 12px;
+        color: var(--muted);
+      }
+      .kv {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 12px;
+      }
+      .kv .k {
+        padding: 12px 12px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: color-mix(in oklab, var(--card) 88%, transparent);
+      }
+      .kv .k .t {
+        font-size: 13px;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+      .kv .k .v {
+        font-weight: 700;
+      }
+
+      .projects {
+        margin-top: 10px;
+        display: grid;
+        gap: 10px;
+      }
+      .proj {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 12px 12px;
+        background: color-mix(in oklab, var(--card) 88%, transparent);
+      }
+      .badge {
+        min-width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          135deg,
+          rgba(139, 92, 246, 0.35),
+          rgba(34, 197, 94, 0.25)
+        );
+        border: 1px solid color-mix(in oklab, var(--line) 60%, transparent);
+        font-weight: 800;
+      }
+      .proj h3 {
+        margin: 0;
+        font-size: 15px;
+      }
+      .proj p {
+        margin: 4px 0 0;
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .footer {
+        margin-top: 18px;
+        padding: 16px 2px 0;
+        color: var(--muted);
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .kv {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <div class="brand">
+          <div class="dot" aria-hidden="true"></div>
+          <div>Chanikya Konda</div>
+          <span class="pill">Oracle Integration Architect</span>
+        </div>
+
+        <nav>
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+          <button
+            class="btn small"
+            id="themeBtn"
+            type="button"
+            aria-label="Toggle theme"
+          >
+            🌙 Theme
+          </button>
+        </nav>
+      </header>
+
+      <section class="hero" id="top">
+        <div class="hero-inner">
+          <div>
+            <h1>Enterprise integrations with OIC, EBS, HCM, and Salesforce.</h1>
+            <p class="sub">
+              I build scalable, fault-tolerant integrations using
+              <b>Oracle Integration Cloud (Gen2/Gen3)</b>,
+              <b>Oracle EBS R12</b>, <b>Oracle Fusion HCM</b>, and
+              <b>Salesforce (SFCC/Sales Cloud)</b>. Strong focus on O2C, P2P,
+              HCM lifecycle, catalog/order automation, and production readiness.
+            </p>
+
+            <div class="cta">
+              <a class="btn primary" href="#portfolio">View Portfolio</a>
+              <a class="btn" href="#contact">Contact</a>
+              <a
+                class="btn"
+                href="https://github.com/chanikyakonda/oic-integration-portfolio"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub Repo ↗</a
+              >
+            </div>
+
+            <div class="chips" aria-label="Highlights">
+              <span class="chip">OIC Gen2/Gen3 • SOA</span>
+              <span class="chip">REST • SOAP • JSON/XML</span>
+              <span class="chip">OIC Agent • OCI File Server</span>
+              <span class="chip">PL/SQL • EBS APIs • SQL*Loader</span>
+              <span class="chip">HCM Extracts • HDL • Atom Feeds</span>
+              <span class="chip">SFCC • Opportunity→Quote</span>
+            </div>
+          </div>
+
+          <aside class="hero-card">
+            <h3>What I deliver</h3>
+            <ul class="list">
+              <li>
+                <b>Integration architecture</b> + end-to-end implementation
+              </li>
+              <li><b>SOA → OIC migration</b> and modernization</li>
+              <li><b>Fault handling</b>, reprocessing, monitoring, alerts</li>
+              <li><b>Partner/B2B</b> file and API integrations (SFTP/PGP)</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card" id="about">
+          <h2>About</h2>
+          <p>
+            Senior Integration Architect with extensive experience across Oracle
+            EBS, Fusion HCM, and enterprise middleware, specializing in Oracle
+            Integration Cloud (OIC). I’ve delivered integrations for digital
+            commerce, HR lifecycle automation, partner catalog ingestion, and
+            production-critical enterprise workflows.
+          </p>
+
+          <div class="kv">
+            <div class="k">
+              <div class="t">Primary focus</div>
+              <div class="v">OIC • ERP/HCM • Salesforce</div>
+            </div>
+            <div class="k">
+              <div class="t">Location</div>
+              <div class="v">Texas, USA</div>
+            </div>
+            <div class="k">
+              <div class="t">Strengths</div>
+              <div class="v">Architecture • Delivery • Support</div>
+            </div>
+            <div class="k">
+              <div class="t">Domains</div>
+              <div class="v">O2C • P2P • HCM • Catalog</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="portfolio">
+          <h2>Portfolio</h2>
+          <p>
+            Public artifacts are intentionally sanitized (mock data, simplified
+            flows). No company or client source is published.
+          </p>
+
+          <div class="projects">
+            <a
+              class="proj"
+              href="https://github.com/chanikyakonda/oic-integration-portfolio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div class="badge">OIC</div>
+              <div>
+                <h3>OIC Integration Portfolio</h3>
+                <p>
+                  Design patterns, sample payloads, and architecture notes for
+                  OIC, EBS, HCM, and Salesforce flows.
+                </p>
+              </div>
+            </a>
+
+            <div class="proj">
+              <div class="badge">SF</div>
+              <div>
+                <h3>Salesforce ↔ EBS</h3>
+                <p>
+                  Opportunity → Quote, order import, and order/shipment status
+                  patterns (API + batch).
+                </p>
+              </div>
+            </div>
+
+            <div class="proj">
+              <div class="badge">HR</div>
+              <div>
+                <h3>HCM Integrations</h3>
+                <p>
+                  New hire / assignment update / termination patterns with
+                  extracts, HDL, and error recovery.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="skills">
+          <h2>Core skills</h2>
+          <p>
+            Tools and platforms I work with regularly for enterprise
+            integrations.
+          </p>
+          <div class="chips">
+            <span class="chip">Oracle Integration Cloud (Gen2/Gen3)</span>
+            <span class="chip">Oracle SOA Suite</span>
+            <span class="chip">Oracle EBS R12 (AP/AR/GL/OM/PO/INV/HR)</span>
+            <span class="chip">Oracle Fusion HCM</span>
+            <span class="chip">Salesforce Sales Cloud</span>
+            <span class="chip">Salesforce Commerce Cloud (SFCC)</span>
+            <span class="chip">BI Publisher • OTBI</span>
+            <span class="chip">PL/SQL • SQL*Loader</span>
+            <span class="chip">REST • SOAP • JSON • XML</span>
+            <span class="chip">SFTP • PGP • Certificates • OAuth2</span>
+          </div>
+        </div>
+
+        <div class="card" id="contact">
+          <h2>Contact</h2>
+          <p>
+            Want to discuss an OIC contract role or an integration project?
+            Reach out.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="mailto:chanikya.konda@gmail.com"
+              >Email</a
+            >
+            <a class="btn" href="tel:+18017066654">Call</a>
+            <!-- Replace YOUR-LINKEDIN with your actual LinkedIn profile slug -->
+            <a
+              class="btn"
+              href="www.linkedin.com/in/chanikyakonda"
+              target="_blank"
+              rel="noreferrer"
+              >LinkedIn ↗</a
+            >
+          </div>
+          <p style="margin-top: 12px; color: var(--muted); font-size: 14px">
+            GitHub:
+            <a
+              href="https://github.com/chanikyakonda"
+              target="_blank"
+              rel="noreferrer"
+              >github.com/chanikyakonda</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>© <span id="year"></span> Chanikya Konda</div>
+        <div>Built for OIC / Integration roles • GitHub Pages</div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        const yearEl = document.getElementById("year");
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        const btn = document.getElementById("themeBtn");
+        const key = "ck_theme";
+        const saved = localStorage.getItem(key);
+
+        function setTheme(t) {
+          document.documentElement.setAttribute("data-theme", t);
+          localStorage.setItem(key, t);
+          if (btn) btn.textContent = t === "light" ? "☀️ Theme" : "🌙 Theme";
+        }
+
+        // Default: follow system unless user saved a preference
+        if (saved) {
+          setTheme(saved);
+        } else {
+          const prefersLight =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: light)").matches;
+          setTheme(prefersLight ? "light" : "dark");
+        }
+
+        if (btn) {
+          btn.addEventListener("click", function () {
+            const current =
+              document.documentElement.getAttribute("data-theme") || "dark";
+            setTheme(current === "dark" ? "light" : "dark");
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
