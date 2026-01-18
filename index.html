@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Chanikya Konda — Integration Architect specializing in Oracle Integration Cloud (OIC Gen2/Gen3), OCI Generative AI, SOA/B2B/EDI, Oracle EBS R12, Fusion HCM, Salesforce/SFCC, and enterprise middleware."
+      content="Chanikya Konda — Integration Architect specializing in Oracle Integration Cloud, OCI Generative AI, SOA/B2B/EDI, Oracle EBS R12, Fusion HCM, Salesforce, Salesforce Commerce Cloud, and enterprise middleware."
     />
     <title>Chanikya Konda | Integration Architect</title>
 
@@ -207,7 +207,7 @@
         color: var(--muted);
         font-size: 16px;
         margin: 0 0 18px;
-        max-width: 75ch;
+        max-width: 78ch;
       }
       .cta {
         display: flex;
@@ -355,6 +355,55 @@
         color: var(--muted);
       }
 
+      /* Clients grid with favicons */
+      .clients-grid {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .client {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 12px 12px;
+        background: color-mix(in oklab, var(--card) 88%, transparent);
+        transition: transform 0.08s ease, opacity 0.2s ease;
+      }
+      .client:active {
+        transform: translateY(1px);
+      }
+      .client .logo {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        border: 1px solid color-mix(in oklab, var(--line) 65%, transparent);
+        background: color-mix(in oklab, var(--card) 86%, transparent);
+        overflow: hidden;
+        flex: 0 0 auto;
+      }
+      .client .logo img {
+        width: 18px;
+        height: 18px;
+        opacity: 0.95;
+      }
+      .client .meta {
+        display: grid;
+        gap: 2px;
+      }
+      .client .name {
+        font-weight: 800;
+        font-size: 14px;
+      }
+      .client .hint {
+        font-size: 13px;
+        color: var(--muted);
+      }
+
       .footer {
         margin-top: 18px;
         padding: 16px 2px 0;
@@ -379,6 +428,9 @@
         .two-col {
           grid-template-columns: 1fr;
         }
+        .clients-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -390,15 +442,15 @@
           <div class="dot" aria-hidden="true"></div>
           <div>Chanikya Konda</div>
           <span class="pill"
-            >Integration Architect • OIC • OCI GenAI • EBS • HCM •
-            Salesforce</span
+            >Integration Architect • OIC • OCI GenAI • EBS • HCM • Salesforce</span
           >
         </div>
 
         <nav>
           <a href="#about">About</a>
-          <a href="#ai">AI Projects</a>
+          <a href="#ai">AI</a>
           <a href="#clients">Clients</a>
+          <a href="#education">Education</a>
           <a href="#integrations">Integrations</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
@@ -416,16 +468,12 @@
       <section class="hero" id="top">
         <div class="hero-inner">
           <div>
-            <h1>
-              Enterprise integrations + automation across Oracle, Salesforce,
-              and B2B systems.
-            </h1>
+            <h1>Enterprise integrations + automation across Oracle, Salesforce, and B2B systems.</h1>
             <p class="sub">
               I design, build, and support production-grade integrations using
-              <b>Oracle Integration Cloud (Gen2/Gen3)</b>,
-              <b>OCI Generative AI</b>, <b>Oracle SOA Suite</b>,
-              <b>Oracle EBS R12</b>, <b>Oracle Fusion HCM</b>, and
-              <b>Salesforce (Sales Cloud / SFCC)</b>. Experience spans
+              <b>Oracle Integration Cloud</b>, <b>OCI Generative AI</b>,
+              <b>Oracle SOA Suite</b>, <b>Oracle EBS R12</b>, <b>Oracle Fusion HCM</b>,
+              and <b>Salesforce (Sales Cloud / SFCC)</b>. Experience spans
               <b>HCM, Finance, SCM, Digital Commerce</b>, and <b>B2B/EDI</b>,
               with strong focus on fault handling, reprocessing, security,
               monitoring, and production readiness.
@@ -444,7 +492,7 @@
             </div>
 
             <div class="chips" aria-label="Highlights">
-              <span class="chip">OIC Gen2/Gen3 • VBCS • PCS</span>
+              <span class="chip">OIC • RPA • VBCS • PCS</span>
               <span class="chip">OCI Generative AI (GenAI)</span>
               <span class="chip">SOA/BPEL • B2B • EDI</span>
               <span class="chip">REST • SOAP • JSON/XML • XSD</span>
@@ -463,9 +511,7 @@
               <li><b>SOA → OIC migrations</b> and modernization</li>
               <li><b>Fault handling</b>, reprocessing, alerts, monitoring</li>
               <li><b>File + API + EDI</b> enterprise patterns (SFTP/PGP)</li>
-              <li>
-                <b>Automation with GenAI</b> for classification & RCA workflows
-              </li>
+              <li><b>Automation with GenAI</b> for classification & RCA workflows</li>
               <li><b>Documentation</b>: MD-50/MD-70/BR-100/CV-60 (AIM)</li>
               <li><b>Production support</b> + performance tuning</li>
             </ul>
@@ -477,19 +523,17 @@
         <div class="card" id="about">
           <h2>About</h2>
           <p>
-            Integration Architect with 15+ years of Oracle experience and 7+
-            years leading cloud integration delivery. Background spans Oracle
-            EBS (11i/R12), Oracle Fusion HCM, digital commerce, SCM, and
-            enterprise middleware. I also leverage <b>OCI Generative AI</b> to
-            improve automation, data quality, and operational support workflows.
+            Integration Architect with 15+ years of Oracle experience and 7+ years
+            leading cloud integration delivery. Background spans Oracle EBS (11i/R12),
+            Oracle Fusion, SCM, and enterprise middleware.
+            I also leverage <b>OCI Generative AI</b> to improve automation, data quality,
+            and operational support workflows.
           </p>
 
           <div class="kv">
             <div class="k">
               <div class="t">Primary focus</div>
-              <div class="v">
-                OIC • OCI GenAI • SOA/B2B • ERP/HCM • Salesforce
-              </div>
+              <div class="v">OIC • OCI GenAI • SOA/B2B • ERP/HCM • Salesforce</div>
             </div>
             <div class="k">
               <div class="t">Location</div>
@@ -506,133 +550,217 @@
           </div>
         </div>
 
-        <!-- NEW AI PROJECTS CARD -->
         <div class="card" id="ai">
           <h2>AI Projects (OCI Generative AI)</h2>
           <p>
-            I use <b>OCI Generative AI</b> to reduce manual effort and improve
-            reliability of enterprise integrations and support operations.
+            I use <b>OCI Generative AI</b> to reduce manual effort and improve reliability
+            of enterprise integrations and support operations.
           </p>
           <ul class="bullets">
-            <li>
-              <b>AI-assisted SKU classification & enrichment</b> (taxonomy
-              mapping, normalization, validation-ready outputs)
-            </li>
-            <li>
-              <b>AI-assisted RCA automation</b> for integration failures (log
-              summarization, structured RCA, suggested next actions)
-            </li>
-            <li>
-              <b>Prompt + guardrail design</b> for consistent JSON outputs,
-              audit-friendly logging, and fallback handling
-            </li>
-            <li>
-              <b>GenAI orchestration patterns in OIC</b> (API invocation,
-              retry/backoff, circuit-breaker style fallbacks)
-            </li>
+            <li><b>AI-assisted SKU classification & enrichment</b> (taxonomy mapping, normalization, validation-ready outputs)</li>
+            <li><b>AI-assisted RCA automation</b> for integration failures (log summarization, structured RCA, suggested next actions)</li>
+            <li><b>Prompt + guardrail design</b> for consistent JSON outputs, audit-friendly logging, and fallback handling</li>
+            <li><b>GenAI orchestration patterns in OIC</b> (API invocation, retry/backoff, fallbacks)</li>
           </ul>
         </div>
 
+        <!-- UPDATED CLIENTS: links + favicons -->
         <div class="card" id="clients">
           <h2>Clients / Employers</h2>
-          <p>
-            Iron Bow Technologies (Current), Altice USA, Cummins, Dish Network /
-            EchoStar, Arrow Electronics, True Temper, Boeing, Eli Lilly &
-            Company, Towers Watson, iFreedom Direct Corporation, Navigator
-            Business Solutions.
-          </p>
-          <p style="margin-top: 10px; font-size: 14px; color: var(--muted)">
-            Note: Public portfolio items are sanitized (mock data / simplified
-            flows).
-          </p>
+          
+          <div class="clients-grid" aria-label="Client list with links">
+            <a class="client" href="https://www.ironbow.com" target="_blank" rel="noreferrer">
+              <div class="logo">
+                <img alt="Iron Bow" src="https://www.google.com/s2/favicons?domain=ironbow.com&sz=64" />
+              </div>
+              <div class="meta">
+                <div class="name">Iron Bow Technologies</div>
+                <div class="hint">Integration architecture • OIC • EBS • HCM • Salesforce</div>
+              </div>
+            </a>
+
+            <a class="client" href="https://www.alticeusa.com" target="_blank" rel="noreferrer">
+              <div class="logo">
+                <img alt="Altice USA" src="https://www.google.com/s2/favicons?domain=alticeusa.com&sz=64" />
+              </div>
+              <div class="meta">
+                <div class="name">Altice USA</div>
+                <div class="hint">OIC • HCM/ERP • reporting • integrations</div>
+              </div>
+            </a>
+
+            <a class="client" href="https://www.cummins.com" target="_blank" rel="noreferrer">
+              <div class="logo">
+                <img alt="Cummins" src="https://www.google.com/s2/favicons?domain=cummins.com&sz=64" />
+              </div>
+              <div class="meta">
+                <div class="name">Cummins</div>
+                <div class="hint">OIC • inventory • promised date / EDI</div>
+              </div>
+            </a>
+
+            <a class="client" href="https://www.dish.com" target="_blank" rel="noreferrer">
+              <div class="logo">
+                <img alt="DISH" src="https://www.google.com/s2/favicons?domain=dish.com&sz=64" />
+              </div>
+              <div class="meta">
+                <div class="name">Dish Network</div>
+                <div class="hint">OIC • HCM • WMS • EDI</div>
+              </div>
+            </a>
+
+            <a class="client" href="https://www.echostar.com" target="_blank" rel="noreferrer">
+              <div class="logo">
+                <img alt="EchoStar" src="https://www.google.com/s2/favicons?domain=echostar.com&sz=64" />
+              </div>
+              <div class="meta">
+                <div class="name">EchoStar</div>
+                <div class="hint">EBS enhancements • HR/Finance/SCM</div>
+              </div>
+            </a>
+
+            <a class="client" href="https://www.arrow.com" target="_blank" rel="noreferrer">
+              <div class="logo">
+                <img alt="Arrow" src="https://www.google.com/s2/favicons?domain=arrow.com&sz=64" />
+              </div>
+              <div class="meta">
+                <div class="name">Arrow Electronics</div>
+                <div class="hint">Fusion/HCM • OIC • JMS • OAF</div>
+              </div>
+            </a>
+
+            <a class="client" href="https://www.truetempersports.com" target="_blank" rel="noreferrer">
+              <div class="logo">
+                <img alt="True Temper" src="https://www.google.com/s2/favicons?domain=truetempersports.com&sz=64" />
+              </div>
+              <div class="meta">
+                <div class="name">True Temper</div>
+                <div class="hint">OIC • OTBI • warehouse packaging flows</div>
+              </div>
+            </a>
+
+            <a class="client" href="https://www.boeing.com" target="_blank" rel="noreferrer">
+              <div class="logo">
+                <img alt="Boeing" src="https://www.google.com/s2/favicons?domain=boeing.com&sz=64" />
+              </div>
+              <div class="meta">
+                <div class="name">Boeing</div>
+                <div class="hint">EBS • OTL • Payroll • GL</div>
+              </div>
+            </a>
+
+            <a class="client" href="https://www.lilly.com" target="_blank" rel="noreferrer">
+              <div class="logo">
+                <img alt="Eli Lilly" src="https://www.google.com/s2/favicons?domain=lilly.com&sz=64" />
+              </div>
+              <div class="meta">
+                <div class="name">Eli Lilly &amp; Company</div>
+                <div class="hint">EBS 11i→R12 • finance • HR</div>
+              </div>
+            </a>
+
+            <a class="client" href="https://www.wtwco.com" target="_blank" rel="noreferrer">
+              <div class="logo">
+                <img alt="WTW" src="https://www.google.com/s2/favicons?domain=wtwco.com&sz=64" />
+              </div>
+              <div class="meta">
+                <div class="name">Towers Watson (WTW)</div>
+                <div class="hint">EBS upgrades • HR reports • GL extracts</div>
+              </div>
+            </a>
+
+            <a class="client" href="https://www.ifreedomdirectcorp.com" target="_blank" rel="noreferrer">
+              <div class="logo">
+                <img alt="iFreedom Direct" src="https://www.google.com/s2/favicons?domain=ifreedomdirectcorp.com&sz=64" />
+              </div>
+              <div class="meta">
+                <div class="name">iFreedom Direct Corporation</div>
+                <div class="hint">Web apps • C#/.NET • SQL Server</div>
+              </div>
+            </a>
+
+            <a class="client" href="https://www.nbs-us.com" target="_blank" rel="noreferrer">
+              <div class="logo">
+                <img alt="Navigator" src="https://www.google.com/s2/favicons?domain=nbs-us.com&sz=64" />
+              </div>
+              <div class="meta">
+                <div class="name">Navigator Business Solutions</div>
+                <div class="hint">SAP B1 add-ons • VB.NET • SQL Server</div>
+              </div>
+            </a>
+          </div>
+
+          
+        </div>
+
+        <!-- NEW EDUCATION -->
+        <div class="card" id="education">
+          <h2>Education</h2>
+          <div class="projects">
+            <div class="proj">
+              <div class="badge">MS</div>
+              <div>
+                <h3>University of Utah — M.S., Computational Science</h3>
+                <p>
+                  Coursework and projects across computing, data analysis, and applied
+                  problem solving; also completed professional courses at David Eccles School of Business.
+                </p>
+              </div>
+            </div>
+
+            <div class="proj">
+              <div class="badge">BS</div>
+              <div>
+                <h3>JNTU Hyderabad — B.Tech, Computer Science &amp; Engineering</h3>
+                <p>
+                  Software development foundation: programming, algorithms, databases, and engineering practices.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="card" id="integrations">
           <h2>Integrations Delivered (High-level)</h2>
           <p>
-            Representative programs across HCM, ERP, Commerce, B2B/EDI, and
-            automation. Details intentionally kept high-level to protect
-            confidential information.
+            Representative programs across HCM, ERP, Commerce, B2B/EDI, and automation.
+            Details intentionally kept high-level to protect confidential information.
           </p>
 
           <div class="two-col">
             <div>
-              <h3
-                style="margin: 10px 0 8px; font-size: 14px; color: var(--text)"
-              >
+              <h3 style="margin: 10px 0 8px; font-size: 14px; color: var(--text)">
                 Iron Bow (Key Programs)
               </h3>
               <ul class="bullets">
-                <li>
-                  SoldierPoint integration program (new entity separation &
-                  secure data flows)
-                </li>
-                <li>
-                  SFCC ↔ EBS order import and order status/shipment updates
-                </li>
-                <li>
-                  EBS → SFCC catalog sync; Synnex → EBS catalog automation
-                </li>
-                <li>
-                  ICECAT → EBS catalog enrichment (product content, images/URLs)
-                </li>
-                <li>
-                  Salesforce Opportunity → EBS Quote (ASO APIs) integration
-                </li>
-                <li>
-                  Cisco RosettaNet 2A1 catalog (SOA/B2B adapters, ACKs, logging)
-                </li>
-                <li>
-                  Greenhouse → HCM (new hire/rehire/transfer/assignment updates)
-                </li>
+                <li>SoldierPoint integration program (new entity separation & secure data flows)</li>
+                <li>SFCC ↔ EBS order import and order status/shipment updates</li>
+                <li>EBS → SFCC catalog sync; Synnex → EBS catalog automation</li>
+                <li>ICECAT → EBS catalog enrichment (product content, images/URLs)</li>
+                <li>Salesforce Opportunity → EBS Quote integration</li>
+                <li>Cisco RosettaNet 2A1 catalog (SOA/B2B adapters, ACKs, logging)</li>
+                <li>Greenhouse → HCM (new hire/rehire/transfer/assignment updates)</li>
                 <li>HCM Time & Absence ↔ EBS projects/tasks/controls</li>
-                <li>
-                  Concur ↔ HCM/EBS (employee sync, receipts, SAE, list objects)
-                </li>
-                <li>iCertis contract customer sync (EBS → iCertis via REST)</li>
-                <li>
-                  Payfactors / Payscale compensation feed (BI Publisher based)
-                </li>
-                <li>T. Rowe Price 401k, loans & deferrals file integrations</li>
-                <li>
-                  OIC Gen3 upgrades across environments; SOA cloud migrations
-                </li>
+                <li>Concur ↔ HCM/EBS (employee sync, receipts, SAE, list objects)</li>
+                <li>iCertis customer sync (EBS → iCertis via REST)</li>
+                <li>Payfactors / Payscale compensation feed (BI Publisher)</li>
+                <li>T. Rowe Price 401k loans/deferrals integrations</li>
+                <li>OIC Gen3 upgrades; SOA cloud migrations</li>
               </ul>
             </div>
 
             <div>
-              <h3
-                style="margin: 10px 0 8px; font-size: 14px; color: var(--text)"
-              >
+              <h3 style="margin: 10px 0 8px; font-size: 14px; color: var(--text)">
                 Prior Programs (Selected)
               </h3>
               <ul class="bullets">
-                <li>
-                  OIC REST integrations for on-hand inventory and WMS
-                  connectivity (Manhattan)
-                </li>
-                <li>
-                  Vertex EDI integrations (850/810/856) and supplier
-                  acknowledgements (855)
-                </li>
-                <li>
-                  Fast Formulas and HCM Extracts for benefits, work structures,
-                  payroll rules
-                </li>
-                <li>
-                  OTBI/BI Publisher reporting with bursting to SFTP destinations
-                </li>
-                <li>
-                  Custom OAF pages, workflows (AME), and EBS R12 extensions
-                </li>
-                <li>
-                  Data conversions and large file loads using SQL*Loader and
-                  validation PL/SQL
-                </li>
-                <li>
-                  SSH/RSA key setup for enterprise SFTP connectivity and secure
-                  transfers
-                </li>
+                <li>OIC REST integrations for on-hand inventory and WMS connectivity (Manhattan)</li>
+                <li>Vertex EDI integrations (850/810/856) and supplier acknowledgements (855)</li>
+                <li>Fast Formulas and HCM Extracts for benefits, work structures, payroll rules</li>
+                <li>OTBI/BI Publisher reporting with bursting to SFTP destinations</li>
+                <li>Custom OAF pages, workflows (AME), and EBS R12 extensions</li>
+                <li>Data conversions and large file loads using SQL*Loader and PL/SQL validation</li>
+                <li>SSH/RSA key setup for enterprise SFTP connectivity and secure transfers</li>
               </ul>
             </div>
           </div>
@@ -648,9 +776,8 @@
               <div>
                 <h3>OIC Integration Portfolio (Public)</h3>
                 <p>
-                  Design patterns, sample payloads, and sanitized architecture
-                  notes for OIC, EBS, HCM, Salesforce, B2B/EDI, file processing,
-                  error handling, and reprocessing.
+                  Design patterns, sample payloads, and sanitized architecture notes for OIC,
+                  EBS, HCM, Salesforce, B2B/EDI, file processing, error handling, and reprocessing.
                 </p>
               </div>
             </a>
@@ -660,9 +787,8 @@
               <div>
                 <h3>OCI GenAI Patterns</h3>
                 <p>
-                  Safe GenAI orchestration patterns for enterprise automation:
-                  structured outputs, retries/fallbacks, audit logs, and
-                  controlled prompt design for operational workflows.
+                  Safe GenAI orchestration patterns: structured outputs, retries/fallbacks,
+                  audit logs, and controlled prompt design for operational workflows.
                 </p>
               </div>
             </div>
@@ -672,9 +798,8 @@
               <div>
                 <h3>B2B / EDI / Partner Integrations</h3>
                 <p>
-                  RosettaNet (2A1), AS2, EDI 832/850/855/856/810 patterns,
-                  SFTP/PGP encryption, validations, acknowledgements, and robust
-                  logging.
+                  RosettaNet (2A1), AS2, EDI 832/850/855/856/810 patterns, SFTP/PGP encryption,
+                  validations, acknowledgements, and robust logging.
                 </p>
               </div>
             </div>
@@ -684,9 +809,8 @@
               <div>
                 <h3>HCM Lifecycle Automation</h3>
                 <p>
-                  New hire, rehire, transfer, termination, assignment updates,
-                  payroll-related feeds, documents, and downstream provisioning
-                  patterns with monitoring and recovery.
+                  New hire, rehire, transfer, termination, assignment updates, payroll-related feeds,
+                  documents, and downstream provisioning patterns with monitoring and recovery.
                 </p>
               </div>
             </div>
@@ -694,10 +818,8 @@
         </div>
 
         <div class="card" id="skills">
-          <h2>Core Skills & Technologies</h2>
-          <p>
-            Broad technical coverage to align with multiple integration roles.
-          </p>
+          <h2>Core Skills &amp; Technologies</h2>
+          <p>Broad technical coverage to align with multiple integration roles.</p>
 
           <div class="chips">
             <span class="chip">Oracle Integration Cloud (OIC Gen2/Gen3)</span>
@@ -708,9 +830,7 @@
             <span class="chip">Oracle Process Cloud (PCS)</span>
             <span class="chip">Oracle Visual Builder (VBCS)</span>
             <span class="chip">Oracle EBS 11i / R12</span>
-            <span class="chip"
-              >Fusion HCM (REST, HDL, Extracts, Fast Formula)</span
-            >
+            <span class="chip">Fusion HCM (REST, HDL, Extracts, Fast Formula)</span>
             <span class="chip">OA Framework (OAF)</span>
             <span class="chip">Oracle Workflow / AME</span>
 
@@ -749,13 +869,11 @@
         <div class="card" id="contact">
           <h2>Contact</h2>
           <p>
-            Interested in OIC contract roles, enterprise integrations, or
-            integration architecture support? Reach out.
+            Interested in OIC contract roles, enterprise integrations, or integration architecture support?
+            Reach out.
           </p>
           <div class="cta">
-            <a class="btn primary" href="mailto:chanikya.konda@gmail.com"
-              >Email</a
-            >
+            <a class="btn primary" href="mailto:chanikya.konda@gmail.com">Email</a>
             <a class="btn" href="tel:+18017066654">Call</a>
             <a
               class="btn"
@@ -767,10 +885,7 @@
           </div>
           <p style="margin-top: 12px; color: var(--muted); font-size: 14px">
             GitHub:
-            <a
-              href="https://github.com/chanikyakonda"
-              target="_blank"
-              rel="noreferrer"
+            <a href="https://github.com/chanikyakonda" target="_blank" rel="noreferrer"
               >github.com/chanikyakonda</a
             >
           </p>
