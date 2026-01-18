@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Chanikya Konda — Oracle Integration Architect (OIC Gen2/Gen3), EBS, HCM, Salesforce integrations."
+      content="Chanikya Konda — Integration Architect specializing in Oracle Integration Cloud (OIC Gen2/Gen3), OCI Generative AI, SOA/B2B/EDI, Oracle EBS R12, Fusion HCM, Salesforce/SFCC, and enterprise middleware."
     />
-    <title>Chanikya Konda | Oracle Integration Architect</title>
+    <title>Chanikya Konda | Integration Architect</title>
 
     <style>
       :root {
@@ -70,7 +70,7 @@
         opacity: 0.92;
       }
       .wrap {
-        max-width: 1060px;
+        max-width: 1120px;
         margin: 0 auto;
         padding: 28px 18px 50px;
       }
@@ -93,8 +93,9 @@
         align-items: center;
         gap: 10px;
         padding-left: 6px;
-        font-weight: 700;
+        font-weight: 800;
         letter-spacing: 0.2px;
+        flex-wrap: wrap;
       }
       .dot {
         width: 12px;
@@ -123,7 +124,7 @@
         color: var(--text);
         border-radius: 999px;
         padding: 10px 14px;
-        font-weight: 600;
+        font-weight: 700;
         cursor: pointer;
         transition: transform 0.08s ease, opacity 0.2s ease;
         display: inline-flex;
@@ -192,7 +193,7 @@
       .hero-inner {
         position: relative;
         display: grid;
-        grid-template-columns: 1.25fr 0.75fr;
+        grid-template-columns: 1.3fr 0.7fr;
         gap: 18px;
         align-items: start;
       }
@@ -206,7 +207,7 @@
         color: var(--muted);
         font-size: 16px;
         margin: 0 0 18px;
-        max-width: 68ch;
+        max-width: 75ch;
       }
       .cta {
         display: flex;
@@ -224,7 +225,7 @@
         margin: 0 0 10px;
         font-size: 14px;
         color: var(--muted);
-        font-weight: 700;
+        font-weight: 800;
         letter-spacing: 0.2px;
       }
       .list {
@@ -278,6 +279,7 @@
         margin: 0 0 12px;
         color: var(--muted);
       }
+
       .kv {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -296,7 +298,22 @@
         margin-bottom: 6px;
       }
       .kv .k .v {
-        font-weight: 700;
+        font-weight: 800;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .bullets {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+      .bullets li {
+        margin: 7px 0;
       }
 
       .projects {
@@ -326,7 +343,7 @@
           rgba(34, 197, 94, 0.25)
         );
         border: 1px solid color-mix(in oklab, var(--line) 60%, transparent);
-        font-weight: 800;
+        font-weight: 900;
       }
       .proj h3 {
         margin: 0;
@@ -349,7 +366,6 @@
         flex-wrap: wrap;
       }
 
-      /* Responsive */
       @media (max-width: 900px) {
         .hero-inner {
           grid-template-columns: 1fr;
@@ -358,6 +374,9 @@
           grid-template-columns: 1fr;
         }
         .kv {
+          grid-template-columns: 1fr;
+        }
+        .two-col {
           grid-template-columns: 1fr;
         }
       }
@@ -370,12 +389,17 @@
         <div class="brand">
           <div class="dot" aria-hidden="true"></div>
           <div>Chanikya Konda</div>
-          <span class="pill">Oracle Integration Architect</span>
+          <span class="pill"
+            >Integration Architect • OIC • OCI GenAI • EBS • HCM •
+            Salesforce</span
+          >
         </div>
 
         <nav>
           <a href="#about">About</a>
-          <a href="#portfolio">Portfolio</a>
+          <a href="#ai">AI Projects</a>
+          <a href="#clients">Clients</a>
+          <a href="#integrations">Integrations</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
           <button
@@ -392,46 +416,58 @@
       <section class="hero" id="top">
         <div class="hero-inner">
           <div>
-            <h1>Enterprise integrations with OIC, EBS, HCM, and Salesforce.</h1>
+            <h1>
+              Enterprise integrations + automation across Oracle, Salesforce,
+              and B2B systems.
+            </h1>
             <p class="sub">
-              I build scalable, fault-tolerant integrations using
+              I design, build, and support production-grade integrations using
               <b>Oracle Integration Cloud (Gen2/Gen3)</b>,
+              <b>OCI Generative AI</b>, <b>Oracle SOA Suite</b>,
               <b>Oracle EBS R12</b>, <b>Oracle Fusion HCM</b>, and
-              <b>Salesforce (SFCC/Sales Cloud)</b>. Strong focus on O2C, P2P,
-              HCM lifecycle, catalog/order automation, and production readiness.
+              <b>Salesforce (Sales Cloud / SFCC)</b>. Experience spans
+              <b>HCM, Finance, SCM, Digital Commerce</b>, and <b>B2B/EDI</b>,
+              with strong focus on fault handling, reprocessing, security,
+              monitoring, and production readiness.
             </p>
 
             <div class="cta">
-              <a class="btn primary" href="#portfolio">View Portfolio</a>
+              <a class="btn primary" href="#integrations">View Integrations</a>
               <a class="btn" href="#contact">Contact</a>
               <a
                 class="btn"
                 href="https://github.com/chanikyakonda/oic-integration-portfolio"
                 target="_blank"
                 rel="noreferrer"
-                >GitHub Repo ↗</a
+                >OIC Portfolio Repo ↗</a
               >
             </div>
 
             <div class="chips" aria-label="Highlights">
-              <span class="chip">OIC Gen2/Gen3 • SOA</span>
-              <span class="chip">REST • SOAP • JSON/XML</span>
-              <span class="chip">OIC Agent • OCI File Server</span>
-              <span class="chip">PL/SQL • EBS APIs • SQL*Loader</span>
+              <span class="chip">OIC Gen2/Gen3 • VBCS • PCS</span>
+              <span class="chip">OCI Generative AI (GenAI)</span>
+              <span class="chip">SOA/BPEL • B2B • EDI</span>
+              <span class="chip">REST • SOAP • JSON/XML • XSD</span>
+              <span class="chip">Adapters: DB • FTP • File • JMS • AQ</span>
+              <span class="chip">SFTP • PGP • Certs • OAuth2</span>
+              <span class="chip">EBS APIs • PL/SQL • SQL*Loader</span>
               <span class="chip">HCM Extracts • HDL • Atom Feeds</span>
-              <span class="chip">SFCC • Opportunity→Quote</span>
+              <span class="chip">Salesforce • SFCC • Opportunity→Quote</span>
             </div>
           </div>
 
           <aside class="hero-card">
             <h3>What I deliver</h3>
             <ul class="list">
+              <li><b>Integration architecture</b> + end-to-end delivery</li>
+              <li><b>SOA → OIC migrations</b> and modernization</li>
+              <li><b>Fault handling</b>, reprocessing, alerts, monitoring</li>
+              <li><b>File + API + EDI</b> enterprise patterns (SFTP/PGP)</li>
               <li>
-                <b>Integration architecture</b> + end-to-end implementation
+                <b>Automation with GenAI</b> for classification & RCA workflows
               </li>
-              <li><b>SOA → OIC migration</b> and modernization</li>
-              <li><b>Fault handling</b>, reprocessing, monitoring, alerts</li>
-              <li><b>Partner/B2B</b> file and API integrations (SFTP/PGP)</li>
+              <li><b>Documentation</b>: MD-50/MD-70/BR-100/CV-60 (AIM)</li>
+              <li><b>Production support</b> + performance tuning</li>
             </ul>
           </aside>
         </div>
@@ -441,17 +477,19 @@
         <div class="card" id="about">
           <h2>About</h2>
           <p>
-            Senior Integration Architect with extensive experience across Oracle
-            EBS, Fusion HCM, and enterprise middleware, specializing in Oracle
-            Integration Cloud (OIC). I’ve delivered integrations for digital
-            commerce, HR lifecycle automation, partner catalog ingestion, and
-            production-critical enterprise workflows.
+            Integration Architect with 15+ years of Oracle experience and 7+
+            years leading cloud integration delivery. Background spans Oracle
+            EBS (11i/R12), Oracle Fusion HCM, digital commerce, SCM, and
+            enterprise middleware. I also leverage <b>OCI Generative AI</b> to
+            improve automation, data quality, and operational support workflows.
           </p>
 
           <div class="kv">
             <div class="k">
               <div class="t">Primary focus</div>
-              <div class="v">OIC • ERP/HCM • Salesforce</div>
+              <div class="v">
+                OIC • OCI GenAI • SOA/B2B • ERP/HCM • Salesforce
+              </div>
             </div>
             <div class="k">
               <div class="t">Location</div>
@@ -463,19 +501,143 @@
             </div>
             <div class="k">
               <div class="t">Domains</div>
-              <div class="v">O2C • P2P • HCM • Catalog</div>
+              <div class="v">HCM • Finance • SCM • O2C • P2P • B2B</div>
             </div>
           </div>
         </div>
 
-        <div class="card" id="portfolio">
-          <h2>Portfolio</h2>
+        <!-- NEW AI PROJECTS CARD -->
+        <div class="card" id="ai">
+          <h2>AI Projects (OCI Generative AI)</h2>
           <p>
-            Public artifacts are intentionally sanitized (mock data, simplified
-            flows). No company or client source is published.
+            I use <b>OCI Generative AI</b> to reduce manual effort and improve
+            reliability of enterprise integrations and support operations.
+          </p>
+          <ul class="bullets">
+            <li>
+              <b>AI-assisted SKU classification & enrichment</b> (taxonomy
+              mapping, normalization, validation-ready outputs)
+            </li>
+            <li>
+              <b>AI-assisted RCA automation</b> for integration failures (log
+              summarization, structured RCA, suggested next actions)
+            </li>
+            <li>
+              <b>Prompt + guardrail design</b> for consistent JSON outputs,
+              audit-friendly logging, and fallback handling
+            </li>
+            <li>
+              <b>GenAI orchestration patterns in OIC</b> (API invocation,
+              retry/backoff, circuit-breaker style fallbacks)
+            </li>
+          </ul>
+        </div>
+
+        <div class="card" id="clients">
+          <h2>Clients / Employers</h2>
+          <p>
+            Iron Bow Technologies (Current), Altice USA, Cummins, Dish Network /
+            EchoStar, Arrow Electronics, True Temper, Boeing, Eli Lilly &
+            Company, Towers Watson, iFreedom Direct Corporation, Navigator
+            Business Solutions.
+          </p>
+          <p style="margin-top: 10px; font-size: 14px; color: var(--muted)">
+            Note: Public portfolio items are sanitized (mock data / simplified
+            flows).
+          </p>
+        </div>
+
+        <div class="card" id="integrations">
+          <h2>Integrations Delivered (High-level)</h2>
+          <p>
+            Representative programs across HCM, ERP, Commerce, B2B/EDI, and
+            automation. Details intentionally kept high-level to protect
+            confidential information.
           </p>
 
-          <div class="projects">
+          <div class="two-col">
+            <div>
+              <h3
+                style="margin: 10px 0 8px; font-size: 14px; color: var(--text)"
+              >
+                Iron Bow (Key Programs)
+              </h3>
+              <ul class="bullets">
+                <li>
+                  SoldierPoint integration program (new entity separation &
+                  secure data flows)
+                </li>
+                <li>
+                  SFCC ↔ EBS order import and order status/shipment updates
+                </li>
+                <li>
+                  EBS → SFCC catalog sync; Synnex → EBS catalog automation
+                </li>
+                <li>
+                  ICECAT → EBS catalog enrichment (product content, images/URLs)
+                </li>
+                <li>
+                  Salesforce Opportunity → EBS Quote (ASO APIs) integration
+                </li>
+                <li>
+                  Cisco RosettaNet 2A1 catalog (SOA/B2B adapters, ACKs, logging)
+                </li>
+                <li>
+                  Greenhouse → HCM (new hire/rehire/transfer/assignment updates)
+                </li>
+                <li>HCM Time & Absence ↔ EBS projects/tasks/controls</li>
+                <li>
+                  Concur ↔ HCM/EBS (employee sync, receipts, SAE, list objects)
+                </li>
+                <li>iCertis contract customer sync (EBS → iCertis via REST)</li>
+                <li>
+                  Payfactors / Payscale compensation feed (BI Publisher based)
+                </li>
+                <li>T. Rowe Price 401k, loans & deferrals file integrations</li>
+                <li>
+                  OIC Gen3 upgrades across environments; SOA cloud migrations
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3
+                style="margin: 10px 0 8px; font-size: 14px; color: var(--text)"
+              >
+                Prior Programs (Selected)
+              </h3>
+              <ul class="bullets">
+                <li>
+                  OIC REST integrations for on-hand inventory and WMS
+                  connectivity (Manhattan)
+                </li>
+                <li>
+                  Vertex EDI integrations (850/810/856) and supplier
+                  acknowledgements (855)
+                </li>
+                <li>
+                  Fast Formulas and HCM Extracts for benefits, work structures,
+                  payroll rules
+                </li>
+                <li>
+                  OTBI/BI Publisher reporting with bursting to SFTP destinations
+                </li>
+                <li>
+                  Custom OAF pages, workflows (AME), and EBS R12 extensions
+                </li>
+                <li>
+                  Data conversions and large file loads using SQL*Loader and
+                  validation PL/SQL
+                </li>
+                <li>
+                  SSH/RSA key setup for enterprise SFTP connectivity and secure
+                  transfers
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="projects" style="margin-top: 14px">
             <a
               class="proj"
               href="https://github.com/chanikyakonda/oic-integration-portfolio"
@@ -484,21 +646,35 @@
             >
               <div class="badge">OIC</div>
               <div>
-                <h3>OIC Integration Portfolio</h3>
+                <h3>OIC Integration Portfolio (Public)</h3>
                 <p>
-                  Design patterns, sample payloads, and architecture notes for
-                  OIC, EBS, HCM, and Salesforce flows.
+                  Design patterns, sample payloads, and sanitized architecture
+                  notes for OIC, EBS, HCM, Salesforce, B2B/EDI, file processing,
+                  error handling, and reprocessing.
                 </p>
               </div>
             </a>
 
             <div class="proj">
-              <div class="badge">SF</div>
+              <div class="badge">AI</div>
               <div>
-                <h3>Salesforce ↔ EBS</h3>
+                <h3>OCI GenAI Patterns</h3>
                 <p>
-                  Opportunity → Quote, order import, and order/shipment status
-                  patterns (API + batch).
+                  Safe GenAI orchestration patterns for enterprise automation:
+                  structured outputs, retries/fallbacks, audit logs, and
+                  controlled prompt design for operational workflows.
+                </p>
+              </div>
+            </div>
+
+            <div class="proj">
+              <div class="badge">B2B</div>
+              <div>
+                <h3>B2B / EDI / Partner Integrations</h3>
+                <p>
+                  RosettaNet (2A1), AS2, EDI 832/850/855/856/810 patterns,
+                  SFTP/PGP encryption, validations, acknowledgements, and robust
+                  logging.
                 </p>
               </div>
             </div>
@@ -506,10 +682,11 @@
             <div class="proj">
               <div class="badge">HR</div>
               <div>
-                <h3>HCM Integrations</h3>
+                <h3>HCM Lifecycle Automation</h3>
                 <p>
-                  New hire / assignment update / termination patterns with
-                  extracts, HDL, and error recovery.
+                  New hire, rehire, transfer, termination, assignment updates,
+                  payroll-related feeds, documents, and downstream provisioning
+                  patterns with monitoring and recovery.
                 </p>
               </div>
             </div>
@@ -517,40 +694,72 @@
         </div>
 
         <div class="card" id="skills">
-          <h2>Core skills</h2>
+          <h2>Core Skills & Technologies</h2>
           <p>
-            Tools and platforms I work with regularly for enterprise
-            integrations.
+            Broad technical coverage to align with multiple integration roles.
           </p>
+
           <div class="chips">
-            <span class="chip">Oracle Integration Cloud (Gen2/Gen3)</span>
-            <span class="chip">Oracle SOA Suite</span>
-            <span class="chip">Oracle EBS R12 (AP/AR/GL/OM/PO/INV/HR)</span>
-            <span class="chip">Oracle Fusion HCM</span>
+            <span class="chip">Oracle Integration Cloud (OIC Gen2/Gen3)</span>
+            <span class="chip">OCI Generative AI (GenAI)</span>
+            <span class="chip">OCI (Cloud Infrastructure)</span>
+            <span class="chip">Oracle SOA Suite (BPEL, Mediator)</span>
+            <span class="chip">Oracle B2B / EDI / AS2</span>
+            <span class="chip">Oracle Process Cloud (PCS)</span>
+            <span class="chip">Oracle Visual Builder (VBCS)</span>
+            <span class="chip">Oracle EBS 11i / R12</span>
+            <span class="chip"
+              >Fusion HCM (REST, HDL, Extracts, Fast Formula)</span
+            >
+            <span class="chip">OA Framework (OAF)</span>
+            <span class="chip">Oracle Workflow / AME</span>
+
+            <span class="chip">REST • SOAP • WSDL</span>
+            <span class="chip">JSON • XML • XSD</span>
+            <span class="chip">FTP/SFTP • SSH • RSA Keys</span>
+            <span class="chip">PGP Encryption/Decryption</span>
+            <span class="chip">OAuth2 • Certificates • TLS/HTTPS</span>
+
+            <span class="chip">Adapters: File • FTP • DB • JMS • AQ</span>
+            <span class="chip">Messaging: JMS • AQ • Queues</span>
+
             <span class="chip">Salesforce Sales Cloud</span>
             <span class="chip">Salesforce Commerce Cloud (SFCC)</span>
-            <span class="chip">BI Publisher • OTBI</span>
-            <span class="chip">PL/SQL • SQL*Loader</span>
-            <span class="chip">REST • SOAP • JSON • XML</span>
-            <span class="chip">SFTP • PGP • Certificates • OAuth2</span>
+            <span class="chip">Manhattan WMS</span>
+            <span class="chip">Concur</span>
+
+            <span class="chip">PL/SQL • SQL</span>
+            <span class="chip">SQL*Loader</span>
+            <span class="chip">UNIX Shell Scripting</span>
+            <span class="chip">Python</span>
+            <span class="chip">Java / J2EE</span>
+
+            <span class="chip">Postman • SoapUI</span>
+            <span class="chip">TOAD • SQL*Plus</span>
+            <span class="chip">OBIEE / ODI</span>
+            <span class="chip">Hyperion</span>
+            <span class="chip">SSIS / SSRS / DataStage</span>
+            <span class="chip">Dell Boomi</span>
+            <span class="chip">Git / Bitbucket / Jira</span>
+
+            <span class="chip">Linux/UNIX (Solaris/HP-UX) • Windows</span>
           </div>
         </div>
 
         <div class="card" id="contact">
           <h2>Contact</h2>
           <p>
-            Want to discuss an OIC contract role or an integration project?
-            Reach out.
+            Interested in OIC contract roles, enterprise integrations, or
+            integration architecture support? Reach out.
           </p>
           <div class="cta">
             <a class="btn primary" href="mailto:chanikya.konda@gmail.com"
               >Email</a
             >
             <a class="btn" href="tel:+18017066654">Call</a>
-            <!-- Replace YOUR-LINKEDIN with your actual LinkedIn profile slug -->
             <a
               class="btn"
-              href="www.linkedin.com/in/chanikyakonda"
+              href="https://www.linkedin.com/in/chanikyakonda"
               target="_blank"
               rel="noreferrer"
               >LinkedIn ↗</a
@@ -570,7 +779,7 @@
 
       <footer class="footer">
         <div>© <span id="year"></span> Chanikya Konda</div>
-        <div>Built for OIC / Integration roles • GitHub Pages</div>
+        <div>Built for Integration / OIC roles • GitHub Pages</div>
       </footer>
     </div>
 
@@ -589,7 +798,6 @@
           if (btn) btn.textContent = t === "light" ? "☀️ Theme" : "🌙 Theme";
         }
 
-        // Default: follow system unless user saved a preference
         if (saved) {
           setTheme(saved);
         } else {
